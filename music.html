@@ -8,20 +8,20 @@
 	<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script>
-		var drums = new Howl({
+		let drums = new Howl({
 			src: ['./assets/music_audio/drums.mp3']
 		});
-		var guitar = new Howl({
+		let guitar = new Howl({
 			src: ['./assets/music_audio/guitar.mp3']
 		});
-		var mic = new Howl({
+		let mic = new Howl({
 			src: ['./assets/music_audio/mic.mp3']
 		});
-		var piano = new Howl({
+		let piano = new Howl({
 			src: ['./assets/music_audio/piano.mp3']
 		});
 
-		var audioMap = {
+		let audioMap = {
 			"guitar-marker": guitar,
 			"drums-marker": drums,
 			"mic-marker": mic,
@@ -34,7 +34,7 @@
 		piano.play();
 
 		window.onload = function () {
-			var arMarkers = document.getElementsByClassName("ar-marker");
+			let arMarkers = document.getElementsByClassName("ar-marker");
 
 			Array.from(arMarkers).forEach(function(arMarker) {
 				arMarker.addEventListener('markerFound', function(event) {
